@@ -32,6 +32,7 @@ function createUI() {
     height: screen.height -3,
     tags: true,
     scrollable: true,
+    alwaysScroll: true,
     border: {
       type: 'line'
     },
@@ -82,6 +83,7 @@ function createUI() {
 
   function addLineToChatLog(line) {
     chatLog.insertBottom(line);
+    chatLog.setScrollPerc(100);
     chatInput.focus();
     screen.render();
   }
