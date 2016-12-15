@@ -31,6 +31,7 @@ function createUI() {
     width: '100%',
     height: screen.height -3,
     tags: true,
+    scrollable: true,
     border: {
       type: 'line'
     },
