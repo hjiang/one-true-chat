@@ -1,6 +1,6 @@
 {
   "name": "one-true-chat",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Terminal chat app using LeanCloud",
   "main": "index.js",
   "bin": {
