@@ -1,0 +1,21 @@
+{
+  "name": "one-true-chat",
+  "version": "0.0.2",
+  "description": "Terminal chat app using LeanCloud",
+  "main": "index.js",
+  "bin": {
+    "1truechat": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hong Jiang <hjiang@leancloud.rocks>",
+  "license": "ISC",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "commander": "^2.9.0",
+    "leancloud-realtime": "^3.3.2",
+    "leancloud-realtime-plugin-typed-messages": "^1.0.0",
+    "leancloud-storage": "^1.5.3"
+  }
+}
