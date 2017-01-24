@@ -2,22 +2,11 @@
 'use strict';
 
 const program = require('commander');
-const AV = require('leancloud-storage');
 const Realtime = require('leancloud-realtime').Realtime;
-const TypedMessagesPlugin =
-        require('leancloud-realtime-plugin-typed-messages').TypedMessagesPlugin;
 const TextMessage =
         require('leancloud-realtime').TextMessage;
 const blessed = require('blessed');
-
-AV.init({
-  appId: 'MYH4fwAiOFx9sFkSSHyRaLNm-gzGzoHsz',
-  appKey:'Teln83xhK2K250jN8RI1pDYi'
-});
-const realtime = new Realtime({
-  appId: 'MYH4fwAiOFx9sFkSSHyRaLNm-gzGzoHsz',
-  plugins: [TypedMessagesPlugin],
-});
+const realtime = new Realtime({appId: 'MYH4fwAiOFx9sFkSSHyRaLNm-gzGzoHsz'});
 
 function createUI() {
   const screen = blessed.screen({
@@ -78,7 +67,6 @@ function createUI() {
   });
 
   chatInput.focus();
-
   screen.render();
 
   function addLineToChatLog(line) {
@@ -100,7 +88,6 @@ program.arguments('<room>')
     startChat(room, nickname);
   })
   .parse(process.argv);
-
 
 function startChat(room, nickname) {
   realtime.createIMClient(nickname).then(self => {
