@@ -13,9 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "blessed": "^0.1.81",
-    "commander": "^2.9.0",
-    "leancloud-realtime": "^3.3.2",
+    "commander": "^2.14.1",
+    "leancloud-realtime": "^3.5.7",
     "leancloud-realtime-plugin-typed-messages": "^1.0.0",
-    "leancloud-storage": "^1.5.3"
+    "leancloud-storage": "^1.5.5"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
   }
 }

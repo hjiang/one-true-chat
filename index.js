@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/*jshint esversion: 6 */
 'use strict';
 
 const program = require('commander');
@@ -96,6 +97,7 @@ function startChat(room, nickname) {
     query.equalTo('name', room);
     query.find().then(conversations => {
       if (conversations.length > 0) {
+        ui.addLineToChatLog('Room found. Joining.');
         return conversations[0].join();
       } else {
         ui.addLineToChatLog('Room not found, creating ...');
